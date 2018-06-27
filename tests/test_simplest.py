@@ -1,7 +1,7 @@
 import unittest
-import app
+from app import simplest
 
 
 class IncrementTest(unittest.TestCase):
     def test_increment(self):
-        self.assertEqual(app.increment(3), 4)
+        self.assertEqual(simplest.increment(3), 4)
