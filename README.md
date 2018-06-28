@@ -23,17 +23,19 @@ $ pipenv install -d
 $ python3 -m unittest
 ```
 
-# How to run them with coverarge
+# Coverarge
+Run tests with coverage
+
 ```bash
 $ coverage run -m unittest
 ```
 
-# Display coverage
+Display coverage
 ```bash
 $ coverage report
 ```
 
-# or export to HTML (contains lines annotated by colors) 
+or export to HTML (contains lines annotated by colors) 
 ```bash
 $ coverage html
 ```
