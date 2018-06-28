@@ -2,7 +2,7 @@
 Supersimple examples how to write unit tests in Python
 
 
-#Pre-requisites 
+# Pre-requisites 
 1. pipenv installed 
 ```bash
 $ pip3 install --user pipenv
@@ -23,7 +23,7 @@ $ pipenv install -d
 $ python3 -m unittest
 ```
 
-# Coverarge
+# Coverage
 Run tests with coverage
 
 ```bash
