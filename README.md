@@ -6,10 +6,9 @@ If you didn't do yet, install pipenv - virtual environment manager recommended b
 ```bash
 pip3 install --user pipenv
 ```
-Install pytest into your virtual environment and add it to development packages. If you don't have virtual
-environment for this folder, it will create one.
+Create virtual environment for this folder and install development and runtime packages.
 ```bash
-pipenv install -d pytest
+pipenv install -d
 ```
 Activate the environment in you aren't in it yet.
 ```bash
