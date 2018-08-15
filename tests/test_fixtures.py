@@ -2,7 +2,11 @@ import os
 import sqlite3
 import pytest
 
-import app_with_db
+import sys
+print(sys.path)
+
+from app import app_with_db
+
 
 @pytest.fixture(scope='function')
 def db(tmpdir):

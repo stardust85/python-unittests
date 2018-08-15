@@ -1,4 +1,4 @@
-import simple
+from app import simple
 
 
 def test_increment():
