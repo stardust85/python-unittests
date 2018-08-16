@@ -1,7 +1,7 @@
 import unittest
 import requests_mock
 
-from app.moking_example import convert_currency
+from app.mocking_example import convert_currency
 
 
 class TestCurrency(unittest.TestCase):
