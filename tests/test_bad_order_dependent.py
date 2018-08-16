@@ -16,4 +16,5 @@ class OrderDependentExample(unittest.TestCase):
     # you can also skip a test method
     @unittest.skip(reason="Fails work for some reason ;) Tracked in https://github.com/stardust85/python-unittests/issues/1")
     def test_baz(self):
+        # Yes, we can use pytest's assertions even in unttest-like TestCase :)
         assert 1 == 2
