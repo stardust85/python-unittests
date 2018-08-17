@@ -3,7 +3,7 @@ Supersimple examples how to write unit tests in Python
 
 
 # Pre-requisites 
-1. pipenv installed 
+1. pipenv (package manager recommended by Python Packaging Authority) installed 
 ```bash
 $ pip3 install --user pipenv
 ```
