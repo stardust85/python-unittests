@@ -7,6 +7,9 @@ import array
 
 
 class Board:
+    """
+    Instance of this class represents one state of the board in the Fifteen puzzle
+    """
     _solved_board = [
             array.array('B', [1, 2, 3, 4]),
             array.array('B', [5, 6, 7, 8]),
