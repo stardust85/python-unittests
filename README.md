@@ -1,20 +1,41 @@
 # python-unittests
 Supersimple examples how to write unit tests in Python
 
+
+# Pre-requisites 
+1. pipenv (package manager recommended by Python Packaging Authority) installed 
+```bash
+$ pip3 install --user pipenv
+```
+
+2. virtual environment activated
+```bash
+$ pipenv shell
+```
+
+3. packages installed 
+```bash
+$ pipenv install -d
+```
+
 # How to run the tests
-If you didn't do yet, install pipenv - virtual environment manager recommended by Python Packaging Authority
 ```bash
-pip3 install --user pipenv
+$ python3 -m unittest
 ```
-Create virtual environment for this folder and install development and runtime packages.
+
+# Coverage
+Run tests with coverage
+
 ```bash
-pipenv install -d
+$ coverage run -m unittest
 ```
-Activate the environment in you aren't in it yet.
+
+Display coverage
 ```bash
-pipenv shell
+$ coverage report
 ```
-Finally, run the tests
+
+or export to HTML (contains lines annotated by colors) 
 ```bash
-pytest
+$ coverage html
 ```

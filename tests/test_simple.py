@@ -1,5 +1,7 @@
+import unittest
 from app import simple
 
 
-def test_increment():
-    assert simple.increment(3) == 4
+class IncrementTest(unittest.TestCase):
+    def test_increment(self):
+        self.assertEqual(simple.increment(3), 4)
