@@ -1,5 +1,6 @@
 import requests
 
+CURRENCY_CONVERSION_API_URL = 'https://api.exchangeratesapi.io'
 
 class CurrencyConvertor:
     """
@@ -11,7 +12,8 @@ class CurrencyConvertor:
         :param target_currency: ISO 4217 code of target currency
         :return how many units of target currency is one unit of base currency
         """
-        resp = requests.get('https://exchangeratesapi.io/api/latest?base={base}'.format(base=base_currency))
+        resp = requests.get('{currency_conversion_api_url}/latest?base={base}'.format(
+            base=base_currency, currency_conversion_api_url=CURRENCY_CONVERSION_API_URL))
         resp.raise_for_status()
         resp_parsed = resp.json()
         return resp_parsed['rates'][target_currency]

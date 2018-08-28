@@ -30,5 +30,5 @@ class IncrementTest(unittest.TestCase):
     def tearDown(self):
         logging.info('Test method ends')
 
-    def testTrue(self):
+    def test_dummy(self):
         self.assertTrue(True)

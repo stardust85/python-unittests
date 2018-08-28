@@ -3,7 +3,7 @@ from unittest.mock import Mock
 
 import requests_mock
 
-from app.mocking_better import CurrencyConvertor
+from app.mocking_better import CurrencyConvertor, CURRENCY_CONVERSION_API_URL
 
 
 class TestCurrency(unittest.TestCase):
@@ -15,7 +15,7 @@ class TestCurrency(unittest.TestCase):
         result = convertor.get_exchange_rate('EUR', 'CZK')
         self.assertIsInstance(result, float)
 
-    def tet_get_exchange_rate_with_mocking(self):
+    def test_get_exchange_rate_with_mocking(self):
         """
         Mocked version of previous test
         """
@@ -38,11 +38,12 @@ class TestCurrency(unittest.TestCase):
         convertor = CurrencyConvertor()
 
         with requests_mock.mock() as m:
-            m.get('https://exchangeratesapi.io/api/latest?base=EUR', text=mocked_response)
+            m.get('{currency_conversion_api_url}/latest?base=EUR'.format(
+                currency_conversion_api_url=CURRENCY_CONVERSION_API_URL), text=mocked_response)
             result = convertor.convert_currency('EUR', 'CZK', 100)
 
         self.assertIsInstance(result, float)
-        self.assertAlmostEqual(result, 25.777)
+        self.assertAlmostEqual(result, 2577.7)
 
     def test_convert_currency__mocking(self):
         convertor = CurrencyConvertor()
