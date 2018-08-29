@@ -2,10 +2,12 @@ import requests
 
 CURRENCY_CONVERSION_API_URL = 'https://api.exchangeratesapi.io'
 
+
 class CurrencyConvertor:
     """
     Why class? Because methods are easier to mock than functions. You mock it only for one object, not for whole class
     """
+
     def get_exchange_rate(self, base_currency, target_currency):
         """
         :param base_currency: ISO 4217 code of base currency
