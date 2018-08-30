@@ -6,7 +6,7 @@ name = "pypi"
 [dev-packages]
 requests-mock = "*"
 coverage = "*"
-pytest-flake8 = "*"
+pytest-flake8 = "*"  # static code analysis
 
 [requires]
 python_version = "3.5"
