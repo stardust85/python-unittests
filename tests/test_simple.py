@@ -1,4 +1,5 @@
 from app import simple
 
 
-assert simple.increment(3) == 4
+def test_increment():
+    assert simple.increment(3) == 4
