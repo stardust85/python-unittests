@@ -8,8 +8,5 @@ requests-mock = "*"
 coverage = "*"
 pytest-flake8 = "*"  # static code analysis
 
-[requires]
-python_version = "3.5"
-
 [packages]
 requests = "*"
